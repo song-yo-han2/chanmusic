@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+.video-post {
+    text-align: center;
+}
+
+.video-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* 각 썸네일 간의 간격 조절 */
+}
+
+.video-thumbnail {
+    width: calc(33.33% - 20px); /* 각 썸네일의 너비 설정 (총 3개가 한 줄에 나오도록) */
+    margin-bottom: 20px; /* 썸네일 간의 간격 추가 */
+    border-radius: 10px; /* 둥근 모서리 설정 */
+
+    @media (max-width: 600px) {
+        width: 100%; /* 화면이 600px 이하일 때는 한 줄에 하나씩 나오도록 변경 */
+    }
+}
+
+.video-thumbnail img {
+    width: 150px; /* 원하는 너비 값으로 설정 */
+    height: 150px; /* 원하는 높이 값으로 설정 */
+    object-fit: cover; /* 이미지 비율을 유지하면서, 이미지가 요소에 맞도록 자동 조정 */
+}
+
+.sidebar {
+    height: 100%;
+    width: 300px; /* 원하는 너비로 조절하세요 */
+    position: fixed; /* 고정 위치로 설정 */
+    top: 0; /* 상단에 위치하도록 설정 */
+    left: 0; /* 왼쪽에 위치하도록 설정 */
+    background-color: #555;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidebar button {
+    width: 100%;
+    padding: 55px;
+    font-size: 20px; /* 글씨 크기를 조절하세요 */
+    margin-bottom: 50px;
+    text-align: left;
+    color: white;
+    border: none;
+    outline: none;
+    background-color: #333;
+    cursor: pointer;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
+/* 썸네일 텍스트 스타일 */
+.video-thumbnail p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #333;
+}
